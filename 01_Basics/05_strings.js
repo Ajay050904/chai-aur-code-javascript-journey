@@ -25,7 +25,15 @@ const newStringOne = "     AjayVish    "
 // console.log(newStringOne);
 // console.log(newStringOne.trim());
 
+const url = "https://ajay.com/hitesh%20Choudhary";
+// console.log(url);
+// console.log(url.replace('%20', '-'));
 
+console.log(url.includes('ajay'));
+
+const randomString = new String("battle-royal-game");
+
+console.log(randomString.split('-'));
 
 
 
