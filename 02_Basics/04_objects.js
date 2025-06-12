@@ -89,6 +89,29 @@ const course = {
   price : "999",
   courseInstructor : "Hitesh"
 }
+
 // course.courseIntructor
-const {courseInstructor} = course
-console.log(courseInstructor);
+// const {courseInstructor} = course
+// console.log(courseInstructor);
+// const {courseInstructor : instructor} = course
+// console.log(instructor);
+
+
+/* JSON */ 
+// {
+//   courseName : "Js in Hindi",
+//   price : "free",
+//   name : "Hitesh"
+// }
+
+[
+  {
+
+  },
+  {
+
+  },
+  {
+    
+  }
+]
