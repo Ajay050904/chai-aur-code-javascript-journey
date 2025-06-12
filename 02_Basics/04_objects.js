@@ -81,3 +81,14 @@ console.log(users[1].email);
 // console.log(Object.values(tinderUser2)); // returns arrays of values
 // console.log(Object.entries(tinderUser2));
 // console.log(tinderUser2.hasOwnProperty('isLoggedIn'));
+
+// ********* destructuring of objects ***********
+
+const course = {
+  courseName : "Js in Hindi",
+  price : "999",
+  courseInstructor : "Hitesh"
+}
+// course.courseIntructor
+const {courseInstructor} = course
+console.log(courseInstructor);
