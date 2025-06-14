@@ -33,3 +33,32 @@ function loginUserMessage(userName) {
 // console.log(loginUserMessage("Naman"));
 // console.log(loginUserMessage());
 
+// to take multiple arguments
+function calculateCartPrice(...num1) { // ... -> rest operator (spred)
+  return num1; // returns array
+}
+// console.log(calculateCartPrice(200, 400, 600));
+
+const user = {
+  username : "ajay",
+  price : 199
+}
+
+function handleObject(anyObject) {
+  console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+
+// handleObject(user)
+handleObject({
+  username : "sam",
+  price : 45
+})
+
+const myNewArray = [200, 100, 500, 600]
+
+function returnSecondValue(getArray) {
+  return getArray[1];
+}
+
+console.log(returnSecondValue(myNewArray)); 
+console.log(returnSecondValue([4, 5, 6, 7])); 
