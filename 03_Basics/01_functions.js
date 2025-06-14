@@ -22,6 +22,14 @@ const ans = addTwoNumber(5, 8);
 // console.log(ans);
 
 function loginUserMessage(userName) {
+  // function loginUserMessage(userName == "sam") // to add default value  
+  // if(userName === undefined) {
+  if(!userName) {
+    console.log("Please enter a username");
+    return;
+  }
     return `${userName} just logged in`;
 }
-console.log(loginUserMessage("Naman"));
+// console.log(loginUserMessage("Naman"));
+// console.log(loginUserMessage());
+
