@@ -33,4 +33,3 @@ console.log(val1);
 // condition ? true : false 
 const iceTeaPRice = 100;
 iceTeaPRice <= 80 ? console.log("Less than 80") : console.log("more than 80");
-

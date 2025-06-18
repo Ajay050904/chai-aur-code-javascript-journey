@@ -28,3 +28,19 @@ switch(month) {
         console.log("After may month");
         break;
 }
+
+const day = "mon";
+switch (day) {
+    case "mon":
+        console.log("Monday");
+        break;
+    case "tue":
+        console.log("Tuesday");
+        break;
+    case "wed":
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("After wed and before sun");
+        break;
+}

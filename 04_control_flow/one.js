@@ -51,3 +51,5 @@ if(userLoggedIn && debitCard) {
 if(loggedInFromGoogle || loggedInFromEmail) {
     console.log("User logged in");
 }
+
+// const mineEmail = "Random@123gmail.com"
