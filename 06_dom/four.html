@@ -16,10 +16,25 @@
     function addLaanguage(langName) {
       const li = document.createElement("li");
       li.innerHTML = `${langName}`;
+      li.style.color = "blue";
       document.querySelector(".language").appendChild(li);
     }
     addLaanguage("JAVA");
     addLaanguage("C++");
+
     // optimize krna pdega qki traverse ho rha h pura tree
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("Python")
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-chile(2)");
+    // secondLang.innerHTML = "Mojo"; // do optimized way
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
   </script>
 </html>
