@@ -63,61 +63,76 @@
     // }
 
     // 3 -> new approach
-    document.getElementById("owl").addEventListener("click", function () {
-      // alert("owl clicked again");
-    });
+    // document.getElementById("owl").addEventListener("click", function () {
+    //   // alert("owl clicked again");
+    // });
 
     // 4th approach -> attachEvent()
     // jQuery -> on
 
     /* `````````````````` */
-    document.getElementById("owl").addEventListener(
-      "click",
-      function (e) {
-        // console.log(e);
-      },
-      false
-    );
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     // console.log(e);
+    //   },
+    //   false
+    // );
 
     // what to study -> events types, timestamp, defaultPrevented, target, toElement, srcElement
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keycode
 
     // event propogation - context -> event public(false -> botttom to top) and event capturing(true -> top to bottom)
-    document.getElementById("owl").addEventListener(
-      "click",
-      function (e) {
-        // console.log(e);
-      },
-      true
-    );
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     // console.log(e);
+    //   },
+    //   true
+    // );
 
-    document.getElementById("images").addEventListener(
-      "click",
-      function (e) {
-        console.log("clicked inside the ul");
-      },
-      // true // default is false
-      false
-    );
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   // true // default is false
+    //   false
+    // );
 
-    document.getElementById("owl").addEventListener(
-      "click",
-      function (e) {
-        console.log("owl is clicked");
-        e.stopPropagation(); // ab buble hoke uper ke element me nhi jayega
-      },
-      false
-    );
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("owl is clicked");
+    //     e.stopPropagation(); // ab buble hoke uper ke element me nhi jayega
+    //   },
+    //   false
+    // );
 
-    document.getElementById("google").addEventListener(
-      "click",
-      function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log("google clicked");
-      },
-      false
-    );
+    // document.getElementById("google").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    //   },
+    //   false
+    // );
+
+    // Task: Remove all images on click
+    document.querySelector("#images").addEventListener("click", (e) => {
+      // console.log(e.target.parentNode);
+      // let removeIt = e.target.parentNode;
+      // removeIt.remove(); // remove whole
+      // removeIt.parentNode.removeChild(removeIt);
+
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
   </script>
 </html>
