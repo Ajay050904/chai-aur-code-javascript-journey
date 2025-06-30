@@ -80,3 +80,31 @@ async function consumePromise() {
 }
 
 consumePromise();
+
+// async function getAllUsers() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     // console.log(response);
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (err) {
+//     console.log("E:", err);
+//   }
+// }
+
+// getAllUsers();
+
+// now by then and catch
+fetch("https://api.github.com/users/hiteshchoudhary")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+// promise.all
+// yes this is also available, kuch reading aap b kro.
