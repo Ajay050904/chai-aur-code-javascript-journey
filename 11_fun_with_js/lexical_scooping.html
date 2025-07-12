@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scooping in javascript</title>
+  </head>
+  <body></body>
+  <script>
+    // function init() {
+    //   let name = "Mozilla";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    function outer() {
+      let username = "mayam";
+      function inner1() {
+        let secret = "my12";
+        console.log("From Inner 1", username);
+      }
+      function inner2() {
+        console.log("From Inner 2", username);
+        // console.log(secret); // not accessable
+      }
+      inner1();
+      inner2();
+    }
+    outer();
+    // console.log("From Outer", username);
+  </script>
+</html>
